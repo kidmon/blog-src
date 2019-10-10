@@ -10,18 +10,18 @@ date: 2019-10-10 02:10:00
 
 포스팅한 내용 중 부족하거나 잘못된 부분에 대한 피드백은 언제든지 환영합니다.
 
-`CS`뿐만 아니라 다양한 주제로 포스팅하고 있으니 재밌게 봐주시면 감사하겠습니다!
+공부뿐만 아니라 다양한 주제로 포스팅하고 있으니 재밌게 봐주시면 감사하겠습니다!
 
 ***
 
 ## Interests
 - Knowledge Graph
-- Natural Language Processing
 - Machine Learning
+- Natural Language Processing
 
 ***
 
 ## Experiences
-- field 1
-- field 2
-- field 3
+> `2019.09 - present` --- M.S. Student in CS @ YU
+> `2017.03 - 2019.06` --- Army Officer @ ROKA
+> `2013.03 - 2017.02` --- B.S. in CSE @ PNU

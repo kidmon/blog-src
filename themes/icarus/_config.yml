@@ -100,7 +100,7 @@ widgets:
         # Author name to be shown in the profile widget
         author: Go High
         # Title of the author to be shown in the profile widget
-        author_title: CS & IT & Travel
+        author_title: 특별하고 싶은 평범한 대학원생
         # Author's current location to be shown in the profile widget
         location: Seoul, Korea
         # Path or URL to the avatar to be shown in the profile widget
