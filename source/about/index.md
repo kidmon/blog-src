@@ -1,6 +1,7 @@
 ---
 title: About
 date: 2019-10-10 02:10:00
+comment:
 ---
 
 ## 안녕하세요!
@@ -22,6 +23,6 @@ date: 2019-10-10 02:10:00
 ***
 
 ## Experiences
-> `2019.09 - present` --- M.S. Student in CS @ YU
-> `2017.03 - 2019.06` --- Army Officer @ ROKA
-> `2013.03 - 2017.02` --- B.S. in CSE @ PNU
+> `2019.09 ~ present` --- M.S. Student in CS
+> `2017.03 ~ 2019.06` --- ROK Army Officer
+> `2013.03 ~ 2017.02` --- B.S. in CSE
