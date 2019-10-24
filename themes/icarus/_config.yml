@@ -1,7 +1,7 @@
 # Version of the Icarus theme that is currently used
 version: 2.6.0
 # Path or URL to the website's icon
-favicon: /images/favicon.svg
+favicon: /images/myfavicon3.png
 # Additional HTML meta tags in an array.
 meta: 
 # Path or URL to RSS atom.xml
@@ -102,11 +102,11 @@ widgets:
         # Author name to be shown in the profile widget
         author: Go High
         # Title of the author to be shown in the profile widget
-        author_title: 특별하고 싶은 평범한 대학원생
+        author_title: 특별하고 싶은 평범한 대학원 라이프
         # Author's current location to be shown in the profile widget
         location: Seoul, Korea
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: /images/ambition.png
+        avatar: /images/avatar.png
         # Email address for the Gravatar to be shown in the profile widget
         gravatar:
         # Whether to show avatar image rounded or square
@@ -119,8 +119,8 @@ widgets:
                 icon: fab fa-github
                 url: 'https://github.com/go-high'
             Facebook:
-                icon: fab fa-facebook
-                url: 'https://facebook.com'
+                icon: fab fa-instagram
+                url: 'https://instagram.com'
             Twitter:
                 icon: fab fa-twitter
                 url: 'https://twitter.com'

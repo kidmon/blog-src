@@ -26,3 +26,7 @@ comment:
 > `2019.09 ~ present` --- M.S. Student in CS
 > `2017.03 ~ 2019.06` --- ROK Army Officer
 > `2013.03 ~ 2017.02` --- B.S. in CSE
+
+<!--
+## Publications 논문쓰고 추가하자!!!
+-->

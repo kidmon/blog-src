@@ -6,13 +6,13 @@ widgets:
   - type: category
     position: right
   - type: recent_posts
-    position: left
+    position: right
 sidebar:
   right:
     sticky: true
-
 title: {{ title }}
 date: {{ date }}
 categories:
 tags:
+thumbnail:
 ---
