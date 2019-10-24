@@ -100,7 +100,7 @@ widgets:
         # Where should the widget be placed, left or right
         position: left
         # Author name to be shown in the profile widget
-        author: Go High
+        author: 동동
         # Title of the author to be shown in the profile widget
         author_title: 특별하고 싶은 평범한 대학원 라이프
         # Author's current location to be shown in the profile widget
