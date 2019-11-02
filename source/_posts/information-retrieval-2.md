@@ -149,6 +149,6 @@ thumbnail:
 
 ---
 
-## 참고
+## 참고한 글
 [Stanford CS276 Information Retrieval](http://web.stanford.edu/class/cs276/)
 [KWANGSIK LEE’s log](http://www.kwangsiklee.com/tag/cs276-information-retrieval/page/3/)

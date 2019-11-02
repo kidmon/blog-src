@@ -182,6 +182,8 @@ $\frac{a}{exp(u_{j})}$
 
 부족한 글이지만 저와 마찬가지로 자연어 처리 공부를 처음 시작하고자 하는 분들에게 조금이나마 도움이 될 수 있었으면 좋겠습니다. 끝으로 포스팅을 작성하는데 참고할 수 있도록 좋은 내용을 잘 정리해주신 분들께 감사의 인사를 올리며 링크 출처를 남깁니다.
 
+---
+
 ## 참고한 글
 1. [쉽게 씌어진 word2vec](https://dreamgonfly.github.io/machine/learning,/natural/language/processing/2017/08/16/word2vec_explained.html)
 2. [워드 임베딩의 간략한 역사](https://brunch.co.kr/@geumjaelee/5)
