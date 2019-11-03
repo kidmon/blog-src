@@ -408,7 +408,7 @@ import tensorflow as tf
 
 아래와 같이 1.17 버전 이하의 numpy로 다운그레이드해 주시면 경고 메시지는 사라집니다.
 ```
-pip install numpy<1.17
+pip install "numpy<1.17"
 ```
 
 <center>
