@@ -308,13 +308,13 @@ PyCharm을 다운받은 후에는 바로 설치를 진행하시면 됩니다. �
 
 Windows 검색을 이용해서 Anaconda Prompt를 실행하고
 ```
-conda create -n 가상환경이름 -python=버전
+conda create -n 가상환경이름 python=버전
 ```
 처럼 입력해주시면 가상 환경이 만들어집니다.
 
 저는 tensorflow라는 이름의 Python 3.6.5 버전을 사용하는 가상 환경을 만들기 위해
 ```
-conda create -n tensorflow -python=3.6.5
+conda create -n tensorflow python=3.6.5
 ```
 커맨드를 입력했습니다.
 
