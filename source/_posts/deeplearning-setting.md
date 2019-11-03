@@ -247,7 +247,7 @@ Anaconda 설치도 간단합니다. 아까 다운받은 설치파일을 실행�
 <br>
 </center>
 
-위의 체크 박스는 Anaconda를 `환경 변수에 자동으로 추가`해주는 옵션입니다. Not recommend라고 되어있지만 우리는 기존에 설치해둔 Python이나 Anaconda가 없으니 체크해주시면 되겠습니다.
+위의 체크 박스는 Anaconda를 `환경 변수에 자동으로 추가`해주는 옵션입니다. Not recommend라고 되어있지만 기존에 설치해둔 Python이나 Anaconda가 없으니 체크해주시면 되겠습니다.
 
 <center>
 <br>
@@ -257,7 +257,7 @@ Anaconda 설치도 간단합니다. 아까 다운받은 설치파일을 실행�
 <br>
 </center>
 
-마지막으로 Microsoft VSCode를 설치하라는 화면인데 우리는 PyCharm을 쓸 예정이니 여기는 그냥 Skip 해주시면 됩니다.
+마지막으로 Microsoft VSCode를 설치하라는 화면입니다. VSCode대신에 PyCharm을 쓸 예정이니 여기는 그냥 Skip 해주시면 됩니다.
 
 이제 Anaconda 설치도 끝났습니다.
 
@@ -439,7 +439,8 @@ pip install "numpy<1.17"
 <br>
 </center>
 
-[Project Interpreter]로 들어가서 좌측 상단에 [Conda Environment]를 클릭합니다. 그 후 [Existing Environment]를 선택하고 아까 우리가 만들어 놓은 가상 환경을 선택합니다. 저는 tensorflow라는 이름으로 가상 환경을 만들었었죠.
+[Project Interpreter]로 들어가서 좌측 상단에 [Conda Environment]를 클릭합니다. 그 후 [Existing Environment]를 선택하고 아까 만들어 놓은 가상 환경을 선택합니다. 저는 tensorflow라는 이름으로 가상 환경을 만들었었죠.
+> Anconda를 기본 경로로 설치했을 때, 가상 환경이 저장되는 경로는 `C:\Users\사용자이름\AppData\Local\conda\conda\envs` 입니다.
 
 <center>
 <br>
