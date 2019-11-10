@@ -10,80 +10,83 @@ widgets:
 sidebar:
   right:
     sticky: true
-title: 딥러닝 입문자를 위한 Tensorflow-GPU 개발 환경 처음부터 끝까지 구축하기(+CUDA, cuDNN, Anaconda, PyCharm)
+title: 딥러닝 입문자를 위한 Tensorflow 개발 환경 구축하기
 date: 2019-11-03 02:55:50
 categories: [Deep Learning, Tensorflow]
 tags: [Deep Learning, Tensorflow, Python, 개발 환경]
-thumbnail:
+thumbnail: /image/deeplearning-setting/thumbnail.png
 ---
 
-이번 포스팅에서는 Windows 10에서 `CUDA, Anaconda, Tensorflow`를 이용한 딥러닝 환경을 구축하는 과정을 알아보겠습니다.
+이번 포스팅에서는 Windows 10에서 Tensorflow-GPU(+CUDA, cuDNN, Anaconda, PyCharm)를 이용한 딥러닝 개발 환경을 구축하는 과정을 알아보겠습니다.
 <!--more-->
-사실 구글링을 해보면 딥러닝 환경 구축에 대한 좋은 포스팅이 많이 있습니다. 그러나 저처럼 Python 및 IDE 설치부터 Tensorflow까지 딥러닝 공부를 처음 시작하는 사람이 참고하기에는 조금 어려운 내용이 많더군요…ㅠㅠ
+사실 구글링을 해보면 딥러닝 개발 환경 구축에 대한 좋은 포스팅이 많이 있습니다. 그러나 저처럼 Python 및 Tensorflow 설치부터 처음 시작하는 사람이 참고하기에는 조금 어려운 내용이 많았습니다..ㅠㅠ
 
-그래서 이번에는 처음 딥러닝 공부를 시작하시는 분들에게 조금이나마 도움이 되고자 `처음부터 끝까지` 차근차근 진행해보겠습니다!!
+그래서 이번에는 딥러닝 공부를 시작하시는 분들에게 조금이나마 도움이 되고자 처음부터 끝까지 차근차근 진행하는 과정을 보여드리도록 하겠습니다.
 
 ---
 
-## 어떻게 개발 환경을 구축하나요?
-딥러닝 개발을 지원하는 프레임워크는 제가 이번에 사용할 Tensorflow부터 Keras, Theano, Torch 등 다양한 종류가 있습니다.
+## 어떤 개발 환경을 구축하나요?
+딥러닝 개발을 지원하는 프레임워크는 제가 이번에 사용할 `Tensorflow`부터 Keras, Torch 등 다양한 종류가 있습니다.
 
-그중에서도 제가 `Tensorflow`를 선택한 이유는 가장 인기 있고 많이 사용되고 있으며, 사용자가 많다 보니 도중에 오류가 발생하거나 혼자 해결하기 힘든 문제가 생겼을 때 참고할 커뮤니티가 활성화되어있기 때문입니다. 구글링을 했을 때 자료가 가장 많기도 하고요ㅋㅋㅋ
+그중에서도 `Tensorflow`를 선택한 이유는 가장 인기 있고 많이 사용되고 있으며, 사용자가 많다 보니 도중에 오류가 발생하거나 혼자 해결하기 힘든 문제가 생겼을 때 참고할 커뮤니티가 활성화되어있기 때문입니다. 구글링을 했을 때 자료가 가장 많기도 합니다
+ㅋㅋㅋ
 
-이번에 구축할 개발 환경의 각 버전은 다음과 같습니다.
+이번에 구축할 개발 환경은 다음과 같습니다.
 
-> - Python -- ***3.6***
-> - CUDA -- ***9.0***
-> - cuDNN -- ***9.0***
-> - Tensorflow -- ***1.8***
+> Python ***3.6***
+> CUDA ***9.0***
+> cuDNN ***9.0***
+> Tensorflow ***1.8***
 
-### Python
-**Python**은 이번 딥러닝 환경에서 사용될 `프로그래밍 언어`입니다. 자세한 설명은 [위키백과](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC)를 참고해주세요.
+### Anaconda
+**Anaconda**는 Python, conda 및 그 외 각종 필수 라이브러리들을 한 번에 설치할 수 있게 해주는 소프트웨어입니다. Python을 설치한 후 필요한 라이브러리를 일일이 설치할 필요 없이 한 방에 모두 설치할 수 있는 것이죠. 또한 `가상환경`을 만들고 그 안에 Python과 라이브러리를 설치하기 때문에 로컬 컴퓨터가 지저분해지지 않고, 내가 필요한 경우에 맞는 개발 환경을 따로 만들어서 사용할 수가 있습니다.
 
 ### PyCharm
-**PyCharm**은 Python 프로그래밍에 사용되는 `IDE(Integrated Development Environment, 통합개발환경)`입니다. 한마디로 Python을 이용한 개발을 가능하게 해주는 `작업실`이라고 할 수 있습니다.
+**PyCharm**은 Python 프로그래밍에 사용되는 `IDE(Integrated Development Environment)`입니다. 쉽게 설명하면 Python을 이용한 개발 과정을 좀 더 편리하게 해주는 `통합개발환경`입니다.
 
 ### CUDA
 > CUDA ("Compute Unified Device Architecture", 쿠다)는 [그래픽 처리 장치](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%BD_%EC%B2%98%EB%A6%AC_%EC%9E%A5%EC%B9%98)(GPU)에서 수행하는 (병렬 처리) 알고리즘을 C 프로그래밍 언어를 비롯한 산업 표준 언어를 사용하여 작성할 수 있도록 하는 [GPGPU](https://ko.wikipedia.org/wiki/GPGPU) 기술이다. CUDA는 [엔비디아](https://ko.wikipedia.org/wiki/%EC%97%94%EB%B9%84%EB%94%94%EC%95%84)가 개발해오고 있으며 이 아키텍처를 사용하려면 엔비디아 GPU와 특별한 스트림 처리 드라이버가 필요하다. CUDA는 G8X GPU로 구성된 지포스 8 시리즈급 이상에서 동작한다. CUDA 플랫폼은 [컴퓨터 커널](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EC%BB%A4%EB%84%90)의 실행을 위해 GPU의 가상 [명령 집합](https://ko.wikipedia.org/wiki/%EB%AA%85%EB%A0%B9_%EC%A7%91%ED%95%A9)과 병렬 연산 요소들을 직접 접근할 수 있는 소프트웨어 계층이다.
 >
 > 출처 - [위키백과](https://ko.wikipedia.org/wiki/CUDA)
 
-네 그렇습니다. **CUDA**는 게임을 할 때만 사용되는 줄 알았던 그래픽카드의 연산장치인 `GPU를 이용하여 프로그래밍 연산`을 가능하게 해주는 기술입니다. 저도 제대로 이해한 건 이번이 처음이네요!!
+네 그렇습니다. **CUDA**는 게임을 할 때만 사용되는 줄 알았던 그래픽카드의 연산장치인 `GPU`를 이용하여 `프로그래밍 연산`을 가능하게 해주는 기술입니다. 저도 제대로 이해한 건 이번이 처음이네요!!
 
 ### cuDNN
-**cuDNN(CUDA Deep Neural Network library)**은 위에서 설명한 CUDA에서 사용되는 `딥러닝 라이브러리`입니다.  CUDA를 사용한 딥러닝 개발환경에 특화되어 있습니다.
+**cuDNN(CUDA Deep Neural Network library)**은 CUDA를 사용한 딥러닝 개발 환경에 특화되어 있는 `딥러닝 라이브러리`입니다.
 
 ### Tensorflow
-**Tensorflow**는 `딥러닝 개발 프레임워크` 중 가장 유명하고 또 많이 사용되는 라이브러리입니다. Google Brain 팀에서 만들었고 현재 오픈소스로  공개되어 있습니다.
+**Tensorflow**는 `딥러닝 개발 프레임워크` 중 가장 유명하고 많이 사용되는 라이브러리입니다. Google Brain 팀에서 만들었으며 누구나 사용할 수 있도록 오픈소스로  공개되어 있습니다.
 
 설명은 이쯤에서 마무리하고 이제 딥러닝 환경 구축을 위한 준비를 시작해보겠습니다.
 
 ---
 
 ## 내 컴퓨터 성능 확인하기
-딥러닝 환경 구축을 시작하기 전에, 먼저 내 컴퓨터에서 `Tensorflow-GPU`를 사용할 수 있는지 확인해야 합니다. 아래는 Tensorflow에서 공식적으로 요구하는 컴퓨터 사양입니다. 자세한 내용은 [여기](https://www.tensorflow.org/install/gpu)에서 확인 가능합니다.
+딥러닝 환경 구축을 시작하기 전에, 먼저 내 컴퓨터에서 `Tensorflow-GPU`를 사용할 수 있는지 확인해야 합니다. 아래는 Tensorflow에서 공식적으로 제공하는 Tensorflow-GPU 사용을 위한 하드웨어와 소프트웨어 사양입니다. 자세한 내용은 [여기](https://www.tensorflow.org/install/gpu)에서 확인 가능합니다.
 
 <center>
 <br>
 
-![Tensorflow를 사용하기 위한 요구사항들](https://paper-attachments.dropbox.com/s_598BBF9D3854C8BA18AAD1FA32CB0BF349B2A099BA33988E57F1DF8A4C6F0832_1572709533799_image.png)
+![Tensorflow를 사용하기 위한 요구사항](https://paper-attachments.dropbox.com/s_598BBF9D3854C8BA18AAD1FA32CB0BF349B2A099BA33988E57F1DF8A4C6F0832_1572709533799_image.png)
 
 <br>
 </center>
 
-물론 CUDA를 사용하지 않더라도 딥러닝 환경 구축이 가능합니다. 말씀드렸다시피 CUDA는 `프로그래밍 연산에 GPU를 사용`할 수 있게 해서 연산 속도를 빠르게 하는 기술이지만, 딥러닝 환경에 필수적인 것은 아닙니다. GPU가 안 되면 CPU로 계산하면 되니까요.
+위의 사양을 충족하지 못하면 Tensorflow-GPU의 사용이 불가능합니다.
 
-당연하게도 `Tensorflow는 CPU 버전과 GPU 버전 두 가지를 모두 제공`하고 있습니다. 그래도 이왕이면 GPU를 사용해서 CUDA를 써보는 게 좋겠죠??
+물론 꼭 Tensorflow-GPU를 사용하지 않더라도 딥러닝 환경 구축이 가능합니다. Tensorflow-GPU는 NVIDIA에서 제공하는 CUDA를 이용해서 `GPU를 활용한 딥러닝`을 할 수 있게 해주지만, GPU를 쓸 수 없다면 CPU만 사용해서 딥러닝을 하면 되니까요.
 
-참고하실 분들을 위해 현재 제가 집에서 사용하고 있는 컴퓨터 사양을 공개합니다.
+당연하게도 Tensorflow는 `CPU 버전과 GPU 버전 두 가지를 모두 제공`하고 있습니다. 그래도 이왕이면 GPU를 사용해서 CUDA를 써보는 게 좋겠죠??
+
+참고하실 분들을 위해 현재 제가 사용하고 있는 컴퓨터 사양을 공개합니다.
 
 > - OS : Windows 10 Pro
 > - CPU : AMD Ryzen 5 1600 3.2GHz
 > - VGA : NVIDIA GeForce GTX 1060 3GB
 
-막상 적어놓고 보니 업그레이드하고 싶은 마음이 솟구치네요…ㅋㅋㅋ
+막상 적어놓고 보니 업그레이드하고 싶은 마음이 솟구치네요..ㅋㅋㅋ
 
-CUDA를 사용하기 위해서는 가장 먼저 본인의 `그래픽카드의 Compute capability`가 얼마인지부터 확인하셔야 합니다. 최신 버전의 텐서플로우를 사용하기 위해서는, Compute capability가 ***3.5*** 이상이 되어야 한다고 하네요.
+CUDA를 사용하기 위해서는 가장 먼저 그래픽카드의 `Compute capability`가 얼마인지부터 확인하셔야 합니다. 최신 버전의 텐서플로우를 사용하기 위해서는, Compute capability가 ***3.5*** 이상이 되어야 한다고 하네요.
 
 NVIDIA GPU에서 지원하는 그래픽카드 모델별 Compute capability는 [여기](https://developer.nvidia.com/cuda-gpus)에서 확인하실 수 있습니다.
 
@@ -95,13 +98,13 @@ NVIDIA GPU에서 지원하는 그래픽카드 모델별 Compute capability는 [�
 <br>
 </center>
 
-제가 사용 중인 GeForce GTX 1060 모델은 Compute Capability가 6.1로 CUDA 사용이 가능합니다. 뭐 엄밀히 따지자면 GeForce GTX 1060보다 약간 하위 모델인 GeForce GTX 1060 3GB 지만 다른 모델과 비교해보면 무리 없이 사용이 가능할 것 같습니다.
+제가 사용 중인 GeForce GTX 1060 모델은 Compute Capability가 6.1로 CUDA 사용이 가능합니다. 뭐 엄밀히 따지자면 GeForce GTX 1060 보다 하위 모델인 GeForce GTX 1060 3GB 지만 무리 없이 사용이 가능할 것 같습니다.
 
-자, 내 컴퓨터에서 CUDA를 사용할 수 있다는 것을 확인했으니 이제부터 진짜로 환경 구축을 시작해봅시다!!는 개뿔 아직 한 가지가 더 남았습니다…
+CUDA를 사용할 수 있다는 것을 확인했으니 이제부터 진짜로 환경 구축을 시작해봅시다!!는 개뿔 아직 한 가지가 더 남았습니다..ㅠㅠ
 
-바로 `그래픽카드 드라이버 최신버전 업데이트`입니다.
+바로 `그래픽카드 드라이버 업데이트`입니다.
 
-그래픽카드 드라이버는 ***410.x*** 이상의 버전을 설치해주셔야 합니다. [여기](http://www.nvidia.com/Download/Find.aspx?lang=en-us)를 통해 내 그래픽카드가 410.x 이상을 지원하는지 확인한 후 드라이버를 다운받아서 설치해주시면 됩니다.
+그래픽카드 드라이버는 ***410.x*** 이상의 버전으로 설치해주셔야 합니다. [여기](http://www.nvidia.com/Download/Find.aspx?lang=en-us)를 통해 내 그래픽카드가 410.x 이상의 드라이버를 지원하는지 확인한 후 드라이버를 다운받아서 설치해주시면 됩니다.
 
 <center>
 <br>
@@ -114,14 +117,13 @@ NVIDIA GPU에서 지원하는 그래픽카드 모델별 Compute capability는 [�
 ---
 
 ## 호환 가능한 버전 확인
-드라이버 다운로드 및 설치까지 완료하셨다면 이제부터가 진짜 시작입니다. CUDA, Anaconda, Tensorflow를 서로 `호환 가능한 버전`으로 준비해줘야 합니다.
+드라이버 다운로드 및 설치까지 완료하셨다면 이제부터가 진짜 시작입니다. Python, CUDA, cuDNN, Tensorflow를 서로 `호환 가능한 버전`으로 준비해줘야 합니다.
 
-사실 프로그래밍 환경 구축에서 가장 어려운 부분이 바로 이거죠. 저를 비롯한 여러 초보 개발자분들이 종일 구글링을 하시는 이유이기도 하고요.
+사실 프로그래밍 환경 구축에서 저를 비롯한 여러 초보 개발자분들이 가장 어려움을 겪는 부분이 바로 여기입니다. 미리 호환 여부를 확인하지 않고 설치를 진행하시면 중간에 `처음부터 다시 시작`해야 하는 불상사가 생기기 때문입니다.
 
-미리 호환 여부를 확인하지 않고 설치를 진행하시면 중간에 `처음부터 다시 시작`해야 하는 불상사가 생길 수도 있습니다. 저도 그랬거든요…ㅠㅠ
+설치를 진행하시기 전에 구글링을 통해 꼭 호환 가능한 버전들을 확인하시기 바랍니다.
 
-아까 도입부에서 말씀드린 것처럼 저는 아래와 같은 버전을 사용할 예정입니다.
-
+도입부에서 말씀드린 것처럼 저는 다음과 같은 버전을 사용할 예정입니다.
 > - Python -- ***3.6***
 > - CUDA -- ***9.0***
 > - cuDNN -- ***9.0***
@@ -137,7 +139,7 @@ NVIDIA GPU에서 지원하는 그래픽카드 모델별 Compute capability는 [�
 
 ## 설치 파일 다운로드
 ### Anaconda
-먼저 `Python과 각종 라이브러리를 한 번에 설치`할 수 있게 해주는 Anaconda부터 다운받아보겠습니다. Anaconda는 [여기](https://repo.anaconda.com/archive/)에서 다운받으실 수 있습니다.
+먼저 Anaconda부터 다운받아보겠습니다. Anaconda는 [여기](https://repo.anaconda.com/archive/)에서 다운받으실 수 있습니다.
 
 <center>
 <br>
@@ -173,15 +175,19 @@ NVIDIA GPU에서 지원하는 그래픽카드 모델별 Compute capability는 [�
 <br>
 </center>
 
-Anaconda, CUDA, cuDNN 다운로드를 완료하셨다면 이제 절반은 끝났습니다!! 이후 설치 과정은 정말 간단합니다. 프로그램 간에 버전 충돌만 없다면요…
+Anaconda, CUDA, cuDNN 다운로드를 완료하셨다면 이제 절반은 끝났습니다!! 이후 설치 과정은 정말 간단합니다. 프로그램 간에 버전 충돌만 없다면요..
 
-그런데 왜 Tensorflow는 다운받지 않냐고요?? Tensorflow는 이후 Anaconda를 이용한 가상환경 구축과정에서 다운받을 예정입니다. 정말 간단하니 걱정하지 않으셔도 됩니다.
+그런데 왜 Tensorflow는 다운받지 않냐고요?? Tensorflow는 이후 Anaconda를 이용한 가상환경 구축과정에서 다운받을 예정입니다.
 
 ---
 
 ## CUDA, cuDNN, Anaconda 설치
 ### CUDA
-그럼 이제 설치를 진행해볼까요?? 가장 먼저 CUDA를 설치해줍니다. CUDA 설치를 진행하기 전에 아까 다운받은 `그래픽카드 드라이버`를 꼭 설치해주세요!!
+그럼 이제 설치를 진행해볼까요??
+
+아, CUDA 설치를 진행하기 전에 아까 다운받은 `그래픽카드 드라이버`를 설치했는지 다시 한 번 확인해주세요!!
+
+그래픽카드 드라이버 설치가 완료되었다면 이제 CUDA를 설치해줍니다.
 
 <center>
 <br>
@@ -195,7 +201,7 @@ Anaconda, CUDA, cuDNN 다운로드를 완료하셨다면 이제 절반은 끝났
 <br>
 </center>
 
-설치 옵션에서는 사용자 정의 설치를 선택해주시면 되는데요. 굳이 빠른 설치가 아닌 사용자 설치를 선택하는 이유는 필요 없는 소프트웨어 설치와 그래픽카드 드라이버 다운그레이드를 막기 위함입니다. 설치 경로는 기본 경로 그대로 두시면 됩니다.
+설치 옵션에서는 `사용자 정의 설치`를 선택해주시면 되는데요. 굳이 빠른 설치가 아닌 사용자 설치를 선택하는 이유는 필요 없는 소프트웨어 설치와 그래픽카드 드라이버 다운그레이드를 막기 위함입니다. 설치 경로는 기본 경로 그대로 두시면 됩니다.
 
 <center>
 <br>
@@ -210,7 +216,7 @@ Anaconda, CUDA, cuDNN 다운로드를 완료하셨다면 이제 절반은 끝났
 ### cuDNN
 다음은 cuDNN을 설치해보겠습니다. 사실 설치라고 할 것까지도 없습니다. 그냥 압축을 풀고 `복사, 붙여넣기`만 하면 끝나거든요.
 
-다운받은 cuDNN의 압축을 풀고 bin, include, lib 폴더를 복사해서 CUDA가 설치되어있는 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 폴더에 붙여넣기 해주시면 됩니다.
+다운받은 cuDNN의 압축을 풀고 `bin, include, lib 폴더`를 복사해서 CUDA가 설치되어있는 `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0` 폴더에 붙여넣기 해주시면 됩니다.
 
 <center>
 <br>
@@ -275,14 +281,14 @@ Anaconda 설치도 간단합니다. 아까 다운받은 설치파일을 실행�
 <br>
 </center>
 
-마지막으로 Microsoft VSCode를 설치하라는 화면이 나옵니다. VSCode대신에 PyCharm을 쓸 예정이니 여기는 그냥 Skip 해주세요.
+마지막으로 Microsoft VSCode를 설치하라는 화면이 나옵니다. VSCode대신에 PyCharm을 쓸 예정이니 여기는 그냥 [Skip] 해주세요.
 
 이제 Anaconda 설치도 끝났습니다.
 
 ---
 
 ## PyCharm 설치 및 가상 환경 구축
-진짜 마지막으로 이번에는 `Python을 이용한 개발을 더 쉽게 해 주는 IDE,  PyCharm`을 설치해봅시다. PyCharm은 [여기](https://www.jetbrains.com/pycharm/download/#section=windows)에서 다운로드받으시면 됩니다.
+진짜 마지막으로 이번에는 PyCharm을 설치해봅시다. PyCharm은 [여기](https://www.jetbrains.com/pycharm/download/#section=windows)에서 다운로드받으시면 됩니다.
 
 Professional과 Community 버전이 있는데 Professional 버전은 유료로, `Community 버전은 무료`로 사용할 수 있습니다. (대학생이신 분들은 간단한 등록과정을 통해 Professional 버전을 무료로 사용 가능합니다.) Community 버전으로도 충분히 딥러닝 환경 구축이 가능하니 저는 Community 버전을 사용하겠습니다.
 
@@ -314,7 +320,7 @@ PyCharm을 다운받은 후에는 바로 설치를 진행하시면 됩니다. �
 <br>
 </center>
 
-필요한 PlugIn을 설치하면 아래와 같은 화면이 나옵니다. (저는 포스팅 편집을 위해 Markdown을 설치했습니다. 여러분은 안 하셔도 괜찮습니다.)
+필요한 PlugIn을 설치하면 아래와 같은 화면이 나옵니다.
 
 <center>
 <br>
@@ -374,7 +380,7 @@ pip install tensorflow-gpu==1.8.0
 <br>
 </center>
 
-Tensorflow는 `CPU 버전과 GPU 버전을 모두 지원`하기 때문에, CUDA와 함께 GPU 버전을 이용하실 분들은 tensorflow-gpu 설치를, CPU 버전을 이용하실 분들은 그냥 tensorflow를 설치해주시면 됩니다.
+Tensorflow는 `CPU 버전과 GPU 버전을 모두 제공`하기 때문에, CUDA와 함께 GPU 버전을 이용하실 분들은 Tensorflow-GPU 설치를, CPU 버전을 이용하실 분들은 그냥 Tensorflow를 설치해주시면 됩니다.
 ```
 pip install tensorflow-gpu #GPU 버전 설치
 pip install tensorflow #CPU 버전 설치
@@ -402,17 +408,17 @@ python이라는 커맨드를 입력해서 Python 인터프리터로 넘어간 �
 ```
 import tensorflow as tf
 ```
-딱 한 줄만 입력해주시면 설치가 잘 되었는지 확인할 수 있습니다. 오류가 안 뜨면 설치가 성공적으로 완료된 겁니다!!
+딱 한 줄만 입력하고 [Enter]를 눌러주면 설치가 잘 되었는지 확인할 수 있습니다. 오류가 안 뜨면 설치가 성공적으로 완료된 겁니다!!
 
 <center>
 <br>
 
-![띠용…?? 오류 메시지인가??](https://paper-attachments.dropbox.com/s_598BBF9D3854C8BA18AAD1FA32CB0BF349B2A099BA33988E57F1DF8A4C6F0832_1572715619150_image.png)
+![띠용..?? 오류 메시지인가??](https://paper-attachments.dropbox.com/s_598BBF9D3854C8BA18AAD1FA32CB0BF349B2A099BA33988E57F1DF8A4C6F0832_1572715619150_image.png)
 
 <br>
 </center>
 
-아마 깜짝 놀라셨을 수도 있습니다… 뭔 오류 메시지 비슷한 것들이 주르륵 출력되었으니까요.
+아마 깜짝 놀라셨을 수도 있습니다.. 뭔 오류 메시지 비슷한 것들이 주르륵 출력되었으니까요.
 
 하지만 다행스럽게도 위와 같은 메시지는 오류가 아니라 `numpy의 버전으로 인한 경고 메시지` 입니다.
 
@@ -459,10 +465,8 @@ pip install "numpy<1.17"
 
 [Project Interpreter]로 들어가서 좌측 상단에 [Conda Environment]를 클릭합니다. 그 후 [Existing Environment]를 선택하고 아까 만들어 놓은 가상 환경을 선택합니다. 저는 tensorflow라는 이름으로 가상 환경을 만들었었죠.
 
-Anconda를 기본 경로로 설치했을 때 가상 환경이 저장되는 경로는 
-> `C:\Users\사용자이름\AppData\Local\conda\conda\envs`
-
-입니다.
+Anconda를 기본 경로로 설치했을 때 가상 환경이 저장되는 경로는 다음과 같습니다.
+> C:\Users\사용자이름\AppData\Local\conda\conda\envs
 
 <center>
 <br>
@@ -492,7 +496,7 @@ Anconda를 기본 경로로 설치했을 때 가상 환경이 저장되는 경�
 <br>
 </center>
 
-여기까지 오셨다면 Tensrflow-GPU 딥러닝 환경 구축이 완료된 것입니다. 정말 고생 많으셨습니다…ㅠㅠ
+여기까지 오셨다면 Tensrflow-GPU 딥러닝 환경 구축이 완료된 것입니다. 정말 고생 많으셨습니다..ㅠㅠ
 
 ---
 

@@ -34,6 +34,9 @@
 <%- _css(fontcdn('Ubuntu:400,600|Source+Code+Pro')) %>
 <%- _css(cdn('highlight.js', '9.12.0', 'styles/' + get_config('article.highlight.theme') + '.css')) %>
 
+<%- _css('https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css') %>
+<%- _css('https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css') %>
+
 <% if (has_config('plugins')) { %>
     <% for (let plugin in get_config('plugins')) { %>
     <%- _partial('plugin/' + plugin, { head: true, plugin: get_config('plugins')[plugin] }) %>
