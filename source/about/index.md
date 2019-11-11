@@ -5,7 +5,7 @@ comment:
 ---
 
 ## 안녕하세요!
-저는 서울의 대학원에서 `Computer Science`를 공부하고 있는 석사과정 학생입니다.
+저는 연세대학교에서 `Computer Science`를 공부하고 있는 석사과정 학생입니다.
 
 공부하며 배운 것을 정리하고 필요한 분들과 함께 나누기 위해 블로그를 운영하고 있습니다.
 
@@ -23,9 +23,8 @@ comment:
 ***
 
 ## Experiences
-> `2019.09 ~ present` --- M.S. Student in CS
-> `2017.03 ~ 2019.06` --- ROK Army Officer
-> `2013.03 ~ 2017.02` --- B.S. in CSE
+- **2019.09 ~ present** --- M.S. Student in CS
+- **2013.03 ~ 2017.02** --- B.S. in CSE
 
 <!--
 ## Publications 논문쓰고 추가하자!!!

@@ -14,7 +14,7 @@ title: 워드 임베딩(Word Embedding)
 date: 2019-10-20 02:22:22
 categories: [NLP, Word Embedding]
 tags: [NLP, Word Embedding, Word2Vec]
-thumbnail:
+thumbnail: /image/word-embedding/thumbnail.png
 ---
 
 워드 임베딩(Word Embedding)은 최근 자연어 처리(Natural Language Processing) 분야에 있어 거의 필수적으로 사용되고 있다고 할 수 있을 만큼 아주 강력한 방법입니다. 단어를 벡터로 표현함으로써 다양한 연산을 가능하게 하고, 이것을 통해 단어 사이의 유사도를 계산할 수 있습니다.

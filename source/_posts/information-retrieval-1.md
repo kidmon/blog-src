@@ -14,7 +14,7 @@ title: Information Retrieval - 1
 date: 2019-10-25 02:40:35
 categories: [NLP, Information Retrieval]
 tags: [NLP, Information Retrieval, 공부정리]
-thumbnail:
+thumbnail: /image/information-retrieval/thumbnail.png
 ---
 
 이 포스팅은 스탠포드 대학교 강의 [CS276 Information Retrieval](http://web.stanford.edu/class/cs276/)의 참고자료와 [KWANGSIK LEE](http://www.kwangsiklee.com/tag/cs276-information-retrieval/page/3/)님의 포스팅을 참고하여 개인적인 공부를 위해 정리한 글입니다.
