@@ -98,7 +98,7 @@ widgets:
         # Widget name
         type: profile
         # Where should the widget be placed, left or right
-        position: left
+        position: right
         # Author name to be shown in the profile widget
         author: 동동
         # Title of the author to be shown in the profile widget
@@ -131,17 +131,18 @@ widgets:
         # Widget name
         type: recent_posts
         # Where should the widget be placed, left or right
-        position: left
-    -
-        # Widget name
-        type: archive
-        # Where should the widget be placed, left or right
-        position: left
+        position: right
     -
         # Widget name
         type: category
         # Where should the widget be placed, left or right
         position: right
+    -
+        # Widget name
+        type: archive
+        # Where should the widget be placed, left or right
+        position: right
+
     -
         # Widget name
         type: tag
