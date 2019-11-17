@@ -8,7 +8,7 @@ meta:
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
 logo:
-    text: GO HIGH
+    text: D525Kim
     #/images/logo.svg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
@@ -117,13 +117,13 @@ widgets:
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/go-high'
+                url: 'https://github.com/d525kim'
             Facebook:
                 icon: fab fa-facebook
                 url: 'https://facebook.com/profile.php?id=100028785161425'
             Instagram:
                 icon: fab fa-instagram
-                url: 'https://instagram.com/vik_dong/'
+                url: 'https://instagram.com/d525kim/'
             LinkedIn:
                 icon: fab fa-linkedin
                 url: 'https://linkedin.com/in/donghyun-kim-829462197/'
