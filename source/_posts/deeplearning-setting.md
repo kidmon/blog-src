@@ -333,13 +333,13 @@ PyCharm을 다운받은 후에는 바로 설치를 진행하시면 됩니다. �
 여기까지 하셨으면 잠시 Anaconda로 한 번 갔다 와야 합니다. 아까 말씀드린 것처럼 `PyCharm에서 사용할 가상 환경`을 만들어야 하거든요.
 
 Windows 검색을 이용해서 `Anaconda Prompt`를 실행하고
-```
+```python
 conda create -n 가상환경이름 python=버전
 ```
 처럼 입력해주시면 가상 환경이 만들어집니다.
 
 저는 tensorflow라는 이름의 Python 3.6.5 버전을 사용하는 가상 환경을 만들기 위해
-```
+```python
 conda create -n tensorflow python=3.6.5
 ```
 커맨드를 입력했습니다.
@@ -355,19 +355,19 @@ conda create -n tensorflow python=3.6.5
 </center>
 
 가상 환경이 생성되고 나면
-```
+```python
 activate 가상환경이름(저의 경우에는 tensorflow)
 ```
 커맨드 입력을 통해 가상 환경을 활성화합니다.
 
 가상 환경을 활성화하고 난 후
-```
+```python
 pip install tensorflow-gpu==버전
 ```
 커맨드 입력을 하시면 드디어 Tensorflow가 설치됩니다!!
 
 저는 1.8.0 버전 설치를 위해
-```
+```python
 pip install tensorflow-gpu==1.8.0
 ```
 커맨드를 입력했습니다.
@@ -381,7 +381,7 @@ pip install tensorflow-gpu==1.8.0
 </center>
 
 Tensorflow는 `CPU 버전과 GPU 버전을 모두 제공`하기 때문에, CUDA와 함께 GPU 버전을 이용하실 분들은 Tensorflow-GPU 설치를, CPU 버전을 이용하실 분들은 그냥 Tensorflow를 설치해주시면 됩니다.
-```
+```python
 pip install tensorflow-gpu #GPU 버전 설치
 pip install tensorflow #CPU 버전 설치
 ```
@@ -405,7 +405,7 @@ pip install tensorflow #CPU 버전 설치
 </center>
 
 python이라는 커맨드를 입력해서 Python 인터프리터로 넘어간 후에
-```
+```python
 import tensorflow as tf
 ```
 딱 한 줄만 입력하고 [Enter]를 눌러주면 설치가 잘 되었는지 확인할 수 있습니다. 오류가 안 뜨면 설치가 성공적으로 완료된 겁니다!!
@@ -431,7 +431,7 @@ import tensorflow as tf
 </center>
 
 아래와 같이 `1.17 버전 이하의 numpy로 다운그레이드`해 주시면 경고 메시지는 사라집니다.
-```
+```python
 pip install "numpy<1.17"
 ```
 

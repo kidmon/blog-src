@@ -36,7 +36,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/go-high'
+            url: 'https://github.com/d525kim'
 # Footer section link settings
 footer:
     # Links to be shown on the right of the footer section
@@ -53,7 +53,7 @@ article:
     highlight:
         # Code highlight themes
         # https://github.com/highlightjs/highlight.js/tree/master/src/styles
-        theme: atom-one-light
+        theme: ocean
         # Show code copying button
         clipboard: true
         # Default folding status of the code blocks. Can be "", "folded", "unfolded"
