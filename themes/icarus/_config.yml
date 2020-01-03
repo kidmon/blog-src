@@ -1,7 +1,7 @@
 # Version of the Icarus theme that is currently used
 version: 2.6.0
 # Path or URL to the website's icon
-favicon: /images/myfavicon3.png
+favicon: /images/myfavicon.png
 # Additional HTML meta tags in an array.
 meta: 
 # Path or URL to RSS atom.xml
@@ -36,7 +36,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/d525kim'
+            url: 'https://github.com/nlpdiver'
 # Footer section link settings
 footer:
     # Links to be shown on the right of the footer section
@@ -117,7 +117,7 @@ widgets:
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/diveintonlp'
+                url: 'https://github.com/nlpdiver'
             Facebook:
                 icon: fab fa-facebook
                 url: 'https://facebook.com/profile.php?id=100028785161425'
