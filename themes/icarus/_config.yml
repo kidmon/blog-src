@@ -8,7 +8,7 @@ meta:
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
 logo:
-    text: GO-HIGH
+    text: Dive to NLP
     #/images/logo.svg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
