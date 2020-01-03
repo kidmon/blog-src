@@ -1,24 +1,20 @@
 ---
-title: About
+title: 안녕하세요!
 date: 2019-10-10 02:10:00
 comment:
 ---
 
-## 안녕하세요!
-저는 연세대학교에서 `Computer Science`를 공부하고 있는 석사과정 학생입니다.
+저는 연세대학교에서 `NLP`를 공부하고 있는 석사과정 학생입니다.
 
 공부하며 배운 것을 정리하고 필요한 분들과 함께 나누기 위해 블로그를 운영하고 있습니다.
 
 포스팅한 내용 중 부족하거나 잘못된 부분에 대한 피드백은 언제든지 환영합니다.
 
-공부뿐만 아니라 다양한 주제로 포스팅하고 있으니 재밌게 봐주시면 감사하겠습니다!
-
 ***
 
 ## Interests
-- Knowledge Graph
-- Machine Learning
 - Natural Language Processing
+- Deep Learning
 
 ***
 
