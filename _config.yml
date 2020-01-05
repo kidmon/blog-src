@@ -7,13 +7,13 @@ title: Dive into NLP
 subtitle:
 description:
 keywords:
-author: [Donghyun Kim]
+author: [kidmon]
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://nlpdiver.github.io
+url: https://kidmon.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -79,5 +79,5 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/nlpdiver/nlpdiver.github.io.git
+  repo: https://github.com/kidmon/kidmon.github.io.git
   branch: master

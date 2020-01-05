@@ -36,7 +36,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/nlpdiver'
+            url: 'https://github.com/kidmon'
 # Footer section link settings
 footer:
     # Links to be shown on the right of the footer section
@@ -117,7 +117,7 @@ widgets:
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/nlpdiver'
+                url: 'https://github.com/kidmon'
             Facebook:
                 icon: fab fa-facebook
                 url: 'https://facebook.com/profile.php?id=100028785161425'
