@@ -4,7 +4,7 @@ date: 2019-10-10 02:10:00
 comment:
 ---
 
-저는 연세대학교에서 `NLP & Deep Learning`을 공부하고 있는 석사과정 학생입니다.
+저는 연세대학교 대학원에서 `Computer Science`를 공부하고 있는 학생입니다.
 
 공부하며 배운 것을 정리하고 공유하기 위해 블로그를 운영하고 있습니다.
 
@@ -13,8 +13,9 @@ comment:
 ***
 
 ## Interests
+- Knowledge Representation
+- Information Extraction
 - NLP with Deep Learning
-- Knowledge Graph
 
 ***
 
