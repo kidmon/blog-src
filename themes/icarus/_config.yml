@@ -8,7 +8,7 @@ meta:
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
 logo:
-    text: Go High
+    text: Kidmon's Blog
     #/images/logo.svg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
@@ -100,7 +100,7 @@ widgets:
         # Where should the widget be placed, left or right
         position: right
         # Author name to be shown in the profile widget
-        author: 동동
+        author: Kidmon
         # Title of the author to be shown in the profile widget
         author_title: Just Do & Go High
         # Author's current location to be shown in the profile widget
