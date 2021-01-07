@@ -9,10 +9,8 @@ Ph.D. Student in Computer Science, Yonsei University
 ***
 
 ## Interests
-- Knowledge Representation
-- NLP with Deep Learning
-- Information Extraction
-- Recommender System
+- Knowledge Representation with Deep Learning
+- NLP with Knowledge Graph
 
 ***
 
